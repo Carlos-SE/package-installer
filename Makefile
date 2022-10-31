@@ -15,6 +15,7 @@ show_help :
 # apt installation
 apt : apt_update
 	@$(APT) vim
+	@$(APT) curl
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	@$(APT) build-essential cmake vim-nox python3-dev
@@ -29,6 +30,7 @@ apt_update :
 # pacman installation
 pacman : pacman_update
 	$(PACMAN) vim
+	$(PACMAN) curl
 	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	$(PACMAN) base-devel python3 cmake python-pip
