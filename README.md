@@ -11,3 +11,4 @@ This makefile is my personal vim installer.
 - [x] go
 - [x] jdk
 - [x] cmake
+- [x] curl
