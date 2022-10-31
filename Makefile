@@ -9,8 +9,8 @@ all : show_help
 show_help :
 	@echo "Please run the command: make 'option'"
 	@echo "considering these two options:"
-	@echo -e "\tmake apt"
-	@echo -e "\tmake pacman"
+	@echo "\tmake apt"
+	@echo "\tmake pacman"
 
 # apt installation
 apt : apt_update
