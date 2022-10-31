@@ -20,8 +20,8 @@ apt : apt_update
 	@$(APT) build-essential cmake vim-nox python3-dev
 	@$(APT) mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
 	@wget -O ~/.vimrc https://raw.githubusercontent.com/Carlos-SE/vimrc/master/vimrc
-	@python3 ~/.vim/plugged/YouCompleteMe/install.py --all
 	@vim -c "PlugInstall"
+	@python3 ~/.vim/plugged/YouCompleteMe/install.py --all
 
 apt_update :
 	@sudo apt update
@@ -34,8 +34,8 @@ pacman : pacman_update
 	$(PACMAN) base-devel python3 cmake python-pip
 	$(PACMAN) go jdk-openjdk npm 
 	@wget -O ~/.vimrc https://raw.githubusercontent.com/Carlos-SE/vimrc/master/vimrc
-	@python3 ~/.vim/plugged/YouCompleteMe/install.py --all
 	@vim -c "PlugInstall"
+	@python3 ~/.vim/plugged/YouCompleteMe/install.py --all
 
 pacman_update :
 	@sudo pacman -Syu
